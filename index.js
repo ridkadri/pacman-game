@@ -54,9 +54,14 @@ function createBoard() {
             squares[i].classList.add('pac-dot')
         } else  if (layout[i] === 1) {
             squares[i].classList.add('wall')
-        }{
-            
+        } else if (layout[i] === 3) {
+            squares[i].classList.add('power-pellet')
         }
     }
 }
 createBoard()
+
+//starting position of Pacman
+let pacmanCurrentIndex = 500;
+
+squares[pacmanCurrentIndex].classList.add('pacman')
